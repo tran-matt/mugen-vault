@@ -8,21 +8,21 @@ import About from './About';
 import Contact from './Contact';
 import Featured from './Featured';
 import Footer from './Footer';
-import Newsletter from './Newsletter'; // Import the Newsletter component
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App flex flex-col min-h-screen">
         <Navbar />
-        <Newsletter /> 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/featured" element={<Featured />} />
-        </Routes>
+        <div className="flex-grow"> 
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/featured" element={<Featured />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>
