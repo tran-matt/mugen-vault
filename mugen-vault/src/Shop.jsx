@@ -5,7 +5,6 @@ function Shop() {
   const [hasItems, setHasItems] = useState(false);
 
   useEffect(() => {
-    // Assuming ShopifyBuy is available globally
     var client = ShopifyBuy.buildClient({
       domain: 'your-shopify-domain.myshopify.com',
       storefrontAccessToken: 'your-storefront-access-token',
@@ -19,7 +18,6 @@ function Shop() {
         product: {
           events: {
             afterRender: function() {
-              // Check if the product component has any children (i.e., if there are items)
               const hasItems = document.getElementById('shopify-buy-button').children.length > 0;
               setHasItems(hasItems);
             },
