@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home() {
   return (
-    <div className="home-container bg-black text-white">
+    <div className="home-container bg-black text-white flex flex-col min-h-screen">
       {/* Hero Section */}
       <div className="hero-section bg-cover bg-center p-20" style={{ backgroundImage: "url('/path-to-your-hero-image.jpg')" }}>
         <h1 className="text-5xl font-bold mb-4">Unlock the World of Collectibles!</h1>
@@ -11,7 +11,7 @@ function Home() {
       </div>
 
       {/* Featured Collections Section */}
-      <div className="featured-collections-section py-20 px-4 md:px-20">
+      <div className="featured-collections-section py-10 px-4 md:px-20">
         <h2 className="text-4xl font-bold mb-8">Featured Collections</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Add your featured collection cards here */}
@@ -30,12 +30,7 @@ function Home() {
         </div>
       </div>
 
-      {/* Call to Action Section */}
-      <div className="call-to-action-section bg-blue-500 p-20 text-center">
-        <h2 className="text-4xl font-bold mb-4">Join the Mugen Vault Community</h2>
-        <p className="text-2xl mb-8">Sign up for our newsletter to get the latest updates on new arrivals and special offers.</p>
-        <a href="/signup" className="bg-white text-blue-500 font-bold py-2 px-4 rounded">Sign Up Now</a>
-      </div>
+  
     </div>
   );
 }
