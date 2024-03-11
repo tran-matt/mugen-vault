@@ -8,7 +8,6 @@ function Contact() {
     e.preventDefault();
 
     emailjs.sendForm('service_h8iika6', 'template_qnr7pxw', form.current, 'LV9RL1SeHhQpzegjl')
-
       .then((result) => {
           console.log(result.text);
           alert('Message sent successfully!');
@@ -21,7 +20,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact-container p-20">
+    <div className="contact-container p-50 mx-auto max-w-lg">
       <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
       <form ref={form} onSubmit={sendEmail} className="contact-form">
         <div className="mb-4">
@@ -31,6 +30,10 @@ function Contact() {
         <div className="mb-4">
           <label htmlFor="email" className="block text-lg mb-2">Email</label>
           <input type="email" id="email" name="email" className="w-full border-2 p-2" required />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="subject" className="block text-lg mb-2">Subject</label>
+          <input type="text" id="subject" name="subject" className="w-full border-2 p-2" required />
         </div>
         <div className="mb-4">
           <label htmlFor="message" className="block text-lg mb-2">Message</label>
